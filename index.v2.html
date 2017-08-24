@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Test your knowledge of US National Parks through our interactive quiz.">
+    <title>National Parks Trivia</title>
+    <link href="main.v2.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="variables.js"></script>
+    <script src="index.v3.js"></script>
+  </head>
+
+  <body>
+    <header role="banner">
+      <h1 class="main-title">National Parks Trivia</h1>
+      <h2 class="sub-title">Did you know...</h2>
+    </header>
+
+    <main role="main">
+      <form role="quiz" id="quiz-form">
+        <fieldset>
+          <h2 class="form-question"><span id="js-question-text">Question 1.</span></h1>
+
+          <div class="response-box">
+            <div class="answer">
+              <input type="radio" name="radGroup" value="1" required><span class="answer" id="js-ans1">Answer 1</span><br/>
+            </div>
+            <div class="answer">
+              <input type="radio" name="radGroup" value="2"><span class="answer" id="js-ans2">Answer 2</span><br/>
+            </div>
+            <div class="answer">
+              <input type="radio" name="radGroup" value="3"><span class="answer" id="js-ans3">Answer 3</span><br/>
+            </div>
+            <div class="answer">
+              <input type="radio" name="radGroup" value="4"><span class="answer" id="js-ans4">Answer 4</span><br/>
+            </div>
+          </div>
+
+          <!-- <div class="submit-box">
+            <button id="js-submit" class="js-modal-click" type="submit"><span class="button-label">Submit</span></input>
+          </button> -->
+
+          <div class="bottom-nav">
+            <button id="js-submit" class="js-modal-click" type="submit"><span class="button-label">Submit</span></input>
+          </button>
+            <!-- <button class="js-previous js-modal-click" type="button" name="Previous"><span class="button-label">Previous</span></button> -->
+            <!-- <button class="js-next js-modal-click" type="button"><span class="button-label">Next</span></button> -->
+            <button class="js-startover js-modal-click" type="reset"><span class="button-label">Start Over</span></button>
+          </div>
+
+          <div>
+            <span class="js-current-question"></span></br>
+            <span class="js-current-score"></span>
+          </div>
+
+        </fieldset>
+      </form>
+    </main>
+
+      <section id="start-page" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="sub-title">Think you know <br/> NATIONAL PARKS?</h2>
+          <button type="button" class="js-modal-click js-take-quiz-button">
+            <span>Take The Quiz</span>
+          </button>
+        </div>
+      </section>
+
+    <section id="feedback-page" class="modal">
+      <div class="modal-content">
+        <!-- <span class="close">&times;</span> -->
+        <h3 class="sub-title"><span class="js-feedback-header">You're Right!</span></h3>
+        <div class="js-answer-blurb"></div>
+        <img class="js-answer-img" src="" alt="" style="width:contain"></br>
+        <button class="js-next" type="button"><span class="button-label">Next</span></button>
+      </div>
+    </section>
+
+    <!-- <section class="feedback-page wrong-answer">
+      <div class="">
+        <h3 class="sub-title">Sorry, that doesn't seem to be right...</h3>
+        <p>The right answer is <span class="js-correct-answer-"></span></p>
+        <div class="js-answer-blurb"></div>
+        <button class="js-next" type="button"><span class="button-label">Next</span></button>
+      </div>
+    </section> -->
+
+    <section id="results-page" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 class="sub-title"><span class="js-results-header"></span></h3>
+        <p><span class="js-final-score"></span></p>
+        <button class="js-startover" type="startover"><span class="button-label">Try Again</span></button>
+      </div>
+    </section>
+
+    <!-- <section class="results-page fail-score">
+      <div class="">
+        <h3 class="sub-title"></h3>
+        <p>Your final score: <span class="js-final-score"> out of 10</span></p>
+        <button type="startover"><span class="button-label">Try Again</span></button>
+      </div>
+    </section> -->
+
+    <!-- <section id="popupBox" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 class="sub-title"><span class="js-popup-header"></span></h3>
+        <p><span class="js-popup-text"></span></p>
+        <button class="js-startover" type="startover"><span class="js-button-label">Try Again</span></button>
+      </div>
+    </section> -->
+
+
+
+  </body>
+</html> 

@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://media.deseretdigital.com/file/410dc37582?crop=top:0|left:0|width:1260|height:670|gravity:Center&quality=55&interlace=none&resize=width:1260&order=resize,crop&c=14&a=e0f131f0');
+  /*background-image: url('https://www.nps.gov/common/uploads/grid_builder/imr/crop16_9/DA3C1F02-1DD8-B71B-0BEA9E07D90D38B8.jpg?width=950&quality=90&mode=crop');*/
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+  z-index: 0;
+  /*background: rgba (0,0,0,0.5);*/
+
+  /*background-color: blue;*/
+}
+
+p {
+  font-size: 21px;
+}
+
+header {
+  width: 638px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+  .main-title {
+    font-size: 38px;
+    margin: 0;
+  }
+
+  .sub-title {
+    font-size: 22px;
+    margin: .5em;
+  }
+
+main {
+  height: 490px;
+  width: 638px;
+  z-index: 1;
+  border: 1px black solid;
+  margin: auto;
+  /*background-color: lightgray;*/
+  /*opacity: 0.5*/
+  background-color: rgba(255,255,255,0.7);
+
+}
+
+section {
+  width: 638px;
+  border: 1px black solid;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+img {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    /*object-fit: contain;*/
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus, button:hover, button:focus, .radGroup:hover, .radGroup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.start-page {
+  position: absolute;
+}
+
+
+form {
+  padding-left: 20px;
+  position: relative;
+  }
+
+fieldset {
+  margin-top: 10px;
+  border: none;
+}
+
+  .form-question {
+    font-size: 20px;
+  }
+
+  .radGroup {
+    margin: 8px;
+  }
+
+  input[type='radio'] {
+    /*transform: scale(1.);*/
+    margin: 4px;
+
+  }
+
+  .answer {
+    font-size: 17px;
+    padding: 6px 4px;
+    margin: 14px 6px ;
+  }
+
+.response-box {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
+
+.bottom-nav {
+  position: absolute;
+  top: 413px;
+
+}
+
+.current-state {
+  position: absolute;
+  top: 413px;
+  left: 380px;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+.current-state span {
+  margin: 10px;
+  padding: 4px;
+}
+
+
+
+  button {
+    height: 32px;
+    width: 100px;
+    padding-right: 10px;
+    border: 1px solid gray;
+  }
+
+  .button-label {
+    font-family: 'Roboto';
+    font-size: 13px;
+  }
