@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Test your knowledge of US National Parks through our interactive quiz.">
     <title>National Parks Trivia</title>
-    <link href="main.v2.css" rel="stylesheet" type="text/css" />
+    <link href="main.v2.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="variables.js"></script>
@@ -19,22 +19,25 @@
     </header>
 
     <main role="main">
-      <form role="quiz" id="quiz-form">
-        <fieldset>
-          <h2 class="form-question"><span id="js-question-text">Question 1.</span></h1>
+      <form id="quiz-form">
+        <fieldset role="radiogroup" aria-required="true" aria-labelledby="js-question-text">
+          <legend>
+            <h2 class="form-question"><span id="js-question-text">Question 1.</span></h1>
+          </legend>
 
           <div class="response-box">
-            <div class="answer">
-              <input type="radio" name="radGroup" value="1" required><span class="answer" id="js-ans1">Answer 1</span><br/>
+            <div class="answer" aria-labelledby="radio1">
+              <input type="radio" role="radio" id="radio1" aria-checked="true"  name="radGroup" value="1" required><label for="radio1" class="answer" id="js-ans1">Answer 1</label><br/>
             </div>
-            <div class="answer">
-              <input type="radio" name="radGroup" value="2"><span class="answer" id="js-ans2">Answer 2</span><br/>
+            <div class="answer" aria-labelledby="radio2">
+              <input type="radio" role="radio" id="radio2" aria-checked="false"
+               name="radGroup" value="2"><label for="radio2" class="answer" id="js-ans2">Answer 2</label><br/>
             </div>
-            <div class="answer">
-              <input type="radio" name="radGroup" value="3"><span class="answer" id="js-ans3">Answer 3</span><br/>
+            <div class="answer" aria-labelledby="radio3">
+              <input type="radio" role="radio" id="radio3" aria-checked="false" name="radGroup"  value="3"><label for="radio3" class="answer" id="js-ans3">Answer 3</label><br/>
             </div>
-            <div class="answer">
-              <input type="radio" name="radGroup" value="4"><span class="answer" id="js-ans4">Answer 4</span><br/>
+            <div class="answer" aria-labelledby="radio4">
+              <input type="radio" role="radio" id="radio4" aria-checked="false" name="radGroup"  value="4"><label for="radio4" class="answer" id="js-ans4">Answer 4</label><br/>
             </div>
           </div>
 
@@ -54,7 +57,6 @@
             <span class="js-current-question"></span></br>
             <span class="js-current-score"></span>
           </div>
-
         </fieldset>
       </form>
     </main>
@@ -113,8 +115,6 @@
         <button class="js-startover" type="startover"><span class="js-button-label">Try Again</span></button>
       </div>
     </section> -->
-
-
 
   </body>
 </html> 

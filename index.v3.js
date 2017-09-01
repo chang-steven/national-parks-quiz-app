@@ -23,7 +23,6 @@ function setCurrentState (quizInput) {
 
 //This function will update the question page with data from 'currentState' and populate the HTML containers with the corresponding quiz text
 function renderQuestionPage() {
-  console.log('`renderQuestionPage` ran');
   clearForm();
 
   $('#js-question-text').text(currentState.question);
@@ -42,10 +41,7 @@ function renderQuestionPage() {
 //'previous' in development
 
 function listenForClick() {
-  console.log('`listenForClick` ran');
-
     $('#quiz-form').submit( function (event) {
-      console.log('Submit clicked');
       event.preventDefault();
       let submittedAnswer = $('input[name=radGroup]:checked', '#quiz-form').val();
       clearForm();
@@ -67,7 +63,6 @@ function listenForClick() {
 
 //This is the callback function which will call 'showResultspage' if end of the quiz or increment the key 'questionNumber' and pass currentState to 'showResultspage'.  Otherwise will increment 'questionNumber' and will re-run 'setCurrentState' and 'renderQuestionPage'
   function clickNext() {
-    console.log('`clickNext` ran');
     if (currentState.questionNumber+1 == currentState.totalQuestions) {
       showResultspage(currentState)
     }
@@ -75,7 +70,6 @@ function listenForClick() {
     else {
       (currentState.questionNumber)++;
       setCurrentState(quizSet[currentState.questionNumber]);
-      console.log(quizSet[currentState.questionNumber]);
       renderQuestionPage()
     }
   };
@@ -83,7 +77,6 @@ function listenForClick() {
 //This function will evaluate if this is the first page in the quiz and therefore prevent going to a previous page.  Otherise will decrement 'questionNumber' and re-run 'setCurrentState' and 'renderQuestionPage'
 
   function clickPrevious() {
-    console.log('`clickPrevious` ran');
     if ((currentState.questionNumber--) < 1) {
       alert("Error!");
     }
@@ -97,7 +90,6 @@ function listenForClick() {
 
 //This function will be called after the form is submitted and will receive a boolean.  This function shows the feedback modal windown indicating the correct response for true or incorrect response for false.
   function showFeedbackPage(boolean) {
-    console.log('`showFeedbackPage` ran');
     let modal = document.getElementById('feedback-page');
     let exit = document.getElementsByClassName("close")[1];
 
@@ -136,7 +128,6 @@ function listenForClick() {
 
 //This function will be called at the end of the quiz.  This function will show the results modal window and indicate either passing or failing score based on the criteria of a score greater than 6.
   function showResultspage() {
-    console.log('`showResultspage` ran');
     let modal = document.getElementById('results-page');
     let exit = document.getElementsByClassName("close")[1];
       modal.style.display = "block";
@@ -167,7 +158,6 @@ function listenForClick() {
   function clearForm() {
     document.getElementById("quiz-form").reset();
     // $('input[name="radGroup"]').prop('checked', false);
-    console.log('`clearForm` ran');
   }
 
 //On page load function start quiz will load the start page prompt
@@ -175,7 +165,6 @@ function startQuizPrompt() {
   let modal = document.getElementById('start-page');
   let exit = document.getElementsByClassName("close")[0];
     modal.style.display = "block";
-    console.log('`startQuizPrompt` ran');
   $('.js-take-quiz-button').click( function() {
     modal.style.display = "none";
     });
@@ -191,7 +180,6 @@ function startQuizPrompt() {
 
 function startOver () {
   if (confirm('Are you sure you want to start over?')) {
-    console.log('`startOver` ran');
     currentState.userCorrect = 0;
     currentState.userWrong = 0;
     currentState.questionNumber = 0;
@@ -201,7 +189,6 @@ function startOver () {
 }
 
 function quizApp() {
-  console.log('`quizApp` ran');
   startQuizPrompt();
   currentState.totalQuestions = quizSet.length;
   setCurrentState(quizSet[currentState.questionNumber]);
